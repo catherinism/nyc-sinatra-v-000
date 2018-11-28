@@ -1,4 +1,8 @@
-get '/landmarks' do
+require 'pry'
+
+class LandmarksController < ApplicationController
+
+  get '/landmarks' do
        @landmarks = Landmark.all
        erb :'/landmarks/index'
    end
@@ -29,3 +33,7 @@ get '/landmarks' do
        redirect :"/landmarks/#{@landmark.id}"
 
    end
+
+
+
+end
