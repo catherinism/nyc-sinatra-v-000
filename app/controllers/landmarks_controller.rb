@@ -1,3 +1,5 @@
+require 'pry'
+
 class LandmarksController < ApplicationController
 
   get '/landmarks' do
