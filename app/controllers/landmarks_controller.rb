@@ -19,9 +19,7 @@ class LandmarksController < ApplicationController
 
    post '/landmarks' do
      #binding.pry
-     @landmark.name = params['landmark']['name']
-  @landmark.year_completed = params['landmark']['year_completed']
-  @landmark.save
+      @landmark = Landmark.create(params[:landmark])
       redirect "landmarks/#{@landmark.id}"
     end
 
@@ -37,5 +35,10 @@ class LandmarksController < ApplicationController
 
      redirect :"/landmarks/#{@landmark.id}"
    end
+
+   post '/landmarks' do
+    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
+    redirect '/landmarks'
+  end
 
 end
