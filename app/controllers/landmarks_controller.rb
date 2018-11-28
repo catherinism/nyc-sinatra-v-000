@@ -19,7 +19,9 @@ class LandmarksController < ApplicationController
 
    post '/landmarks' do
      #binding.pry
-      @landmark = Landmark.create(params[:landmark])
+     @landmark.name = params['landmark']['name']
+  @landmark.year_completed = params['landmark']['year_completed']
+  @landmark.save
       redirect "landmarks/#{@landmark.id}"
     end
 
