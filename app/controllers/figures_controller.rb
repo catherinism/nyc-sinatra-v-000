@@ -43,7 +43,7 @@ class FiguresController < ApplicationController
     @landmark = Landmark.find_or_create_by([:landmark])
     @figure.save
     redirect :"/figures/#{@figure.id}"
-    
+
   end
 
 
