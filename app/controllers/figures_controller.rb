@@ -37,7 +37,4 @@ end
     erb :'/figures/edit'
   end
 
-
-
-
 end
