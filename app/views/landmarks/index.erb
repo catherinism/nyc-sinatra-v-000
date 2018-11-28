@@ -1,14 +1,10 @@
 <h2>All Historical Landmarks</h2>
 
-<%@landmarks.each do |landmark|%>
+<%Landmark.all.each do |landmark|%>
     <%=landmark.name%>
+    <%=landmark.year_completed%>
     <br></br>
     <%end%>
-
-    <%@landmarks.year_completed.each do |landmark|%>
-        <%=landmark.year_completed%>
-        <br></br>
-        <%end%>
 
 
 
